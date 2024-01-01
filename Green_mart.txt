@@ -1,0 +1,351 @@
+DeleteMariaDB [green_supermarkect]> create database green_mart;
+Query OK, 1 row affected (0.001 sec)
+
+MariaDB [green_supermarkect]> use green_mart;
+Database changed
+MariaDB [green_mart]> create table user_info(
+    ->      first_name varchar(50),
+    ->      last_name varchar(50),
+    ->      phone_no varchar(25),
+    ->      email varchar(50),
+    ->      password varchar(50)
+    ->      );
+Query OK, 0 rows affected (0.009 sec)
+
+MariaDB [green_mart]> create table clothes_details(
+    ->      clothes_id varchar(50),
+    ->      clothes_name varchar(50),
+    ->      prices int,
+    ->      item_des varchar(255),
+    ->      qty int,
+    ->      image_path varchar(255),
+    ->      clothes_category int
+    ->      );
+Query OK, 0 rows affected (0.011 sec)
+
+MariaDB [green_mart]> create table grocery_details(
+    -> grocery-id varchar(255),
+    -> grocery;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-id varchar(255),
+grocery' at line 2
+MariaDB [green_mart]> create table grocery_details(
+    -> grocery_id varchar(255),
+    -> grocery_name varchar(255),
+    -> prices int,
+    -> item_des varchar(255),
+    -> qty int,
+    -> image_path varchar(255),
+    -> grocery_cetegory int
+    -> );
+Query OK, 0 rows affected (0.010 sec)
+
+MariaDB [green_mart]> insert into grocery_details(
+    -> grocery_id,grocery_name,prices,item_des,qty,image_path,grocery_cetegory)values(
+    -> "gi001","Rice",180.00,"",5,"images/grocery-page/grocery-page1.jpg",1);
+Query OK, 1 row affected (0.004 sec)
+
+MariaDB [green_mart]>
+
+
+MariaDB [green_mart]> create table house_holders_items_details(
+    -> house_holder_id varchar(255),
+    -> house_holder_item_name varchar(255),
+    -> House_Holder_item_prices int,
+    ->  house_holder_item_des varchar(255),
+    -> house_holder_item_qty int,
+    -> house_holder_item_image_path varchar(255),
+    -> house_holder_item_category int	
+    -> );
+Query OK, 0 rows affected (0.010 sec)
+
+MariaDB [green_mart]> insert into house_holders_items_details(
+    -> house_holder_id,house_holder_item_name,House_Holder_item_prices, house_holder_item_des,house_holder_item_qty,house_holder_item_image_path, house_holder_item_category)values(
+    -> "hi001","Signal tooth brush deep clen",100.00,
+
+
+
+ create table grocery_details(
+    -> grocery_id varchar(255),
+    -> grocery_name varchar(255),
+    -> prices int,
+    -> item_des varchar(255),
+    -> qty int,
+    -> image_path varchar(255),
+    -> grocery_cetegory int
+    -> );
+Query OK, 0 rows affected (0.008 sec)
+
+MariaDB [green_mart]> insert into grocery_details(
+    -> grocery_id,grocery_name,prices,item_des,qty,image_path,grocery_cetegory)values(
+    -> "gi001","Rice",200.00,"",5,"images/grocery-page/grocery-page1.jpg",1),(
+    -> insert into grocery_details(;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'into grocery_details(' at line 4
+MariaDB [green_mart]> insert into grocery_details(
+    -> grocery_id,grocery_name,prices,item_des,qty,image_path,grocery_cetegory)values(
+    -> "gi001","Rice",200.00,"A milled medium-long grained rice. Nadu rice is pre-boiled.",5,"images/grocery-page/grocery-page1.jpg",1),(
+    -> "gi002","Mentos",200.00,"Mentos Chewy Mints are offered in several refreshing flavour varieties. Mentos Mint provides the benefit of a mint with an enjoyable chew! Images for illustration purposes only. Product received may vary.",5,"images/grocery-page/grocery-page1.jpg",1),(
+    -> "gi002","Mentos",200.00,"Mentos Chewy Mints are offered in several refreshing flavour varieties. Mentos Mint provides the benefit of a mint with an enjoyable chew! Images for illustration purposes only. Product received may vary.",5,"images/grocery-page/grocery-page1.jpg",1),(;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 5
+MariaDB [green_mart]> insert into grocery_details(
+    -> grocery_id,grocery_name,prices,item_des,qty,image_path,grocery_cetegory)values(
+    -> "gi001","Rice",200.00,"A milled medium-long grained rice. Nadu rice is pre-boiled.",5,"images/grocery-page/grocery-page1.jpg",1),(
+    -> "gi002","Mentos",200.00,"Mentos Chewy Mints are offered in several refreshing flavour varieties. Mentos Mint provides the benefit of a mint with an enjoyable chew! Images for illustration purposes only. Product received may vary.",5,"images/grocery-page/grocery-page3.jpg",1),(
+    -> "gi003","Chocolate ",200.00,"Ssorted Handcrafted chcolates packed in a box. Images for illustration purposes only. Product received may vary.",5,"images/grocery-page/grocery-page2.jpg",1),(
+    -> "gi004","Renuka coconut milk powder ",200.00,"Has a wide range of applications and is great for soups, sauces, curries, seafood and vegetable dishes as well as cakes, biscuits, desserts and beverages. Images for illustration purposes only. Product received may vary.",5,"images/grocery-page/grocery-page4.jpg",1),(
+    -> "gi005","Soya beans ",200.00,"Soybeans are a very rich source of plant-based protein and fat. Images for illustration purposes only. Product received may vary.",5,"images/grocery-page/grocery-page7.jpg",1);
+Query OK, 5 rows affected (0.035 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+MariaDB [green_mart]>
+
+
+MariaDB [green_mart]> insert into grocery_details(
+    -> grocery_id,grocery_name,prices,item_des,qty,image_path,grocery_cetegory)values(
+    -> "gi011","Grocery Item",200.00,"A delightfully crunchy rolled wafer biscuit with creamy vanilla filling. Images for illustration purposes only. Product received may vary",5,"images/grocery-page/grocery-page5.jpg",1),(
+    -> "gi012","Grocery Item",200.00,"A delightfully crunchy rolled wafer biscuit with creamy vanilla filling. Images for illustration purposes only. Product received may vary",5,"images/grocery-page/grocery-page6.jpg",1),(
+    -> "gi013","Grocery Item",200.00,"A delightfully crunchy rolled wafer biscuit with creamy vanilla filling. Images for illustration purposes only. Product received may vary",5,"images/grocery-page/grocery-page8.jpg",1),(
+    -> "gi014","Grocery Item",200.00,"A delightfully crunchy rolled wafer biscuit with creamy vanilla filling. Images for illustration purposes only. Product received may vary",5,"images/grocery-page/grocery-page11.jpg",1),(
+    -> "gi015","Grocery Item",200.00,"A delightfully crunchy rolled wafer biscuit with creamy vanilla filling. Images for illustration purposes only. Product received may vary",5,"images/grocery-page/grocery-page13.jpg",1),(
+    -> "gi016","Grocery Item",200.00,"A delightfully crunchy rolled wafer biscuit with creamy vanilla filling. Images for illustration purposes only. Product received may vary",5,"images/grocery-page/grocery-page14.jpg",1),(
+    -> "gi017","Grocery Item",200.00,"A delightfully crunchy rolled wafer biscuit with creamy vanilla filling. Images for illustration purposes only. Product received may vary",5,"images/grocery-page/grocery-page17.jpg",1),(
+    -> "gi018","Grocery Item",200.00,"A delightfully crunchy rolled wafer biscuit with creamy vanilla filling. Images for illustration purposes only. Product received may vary",5,"images/grocery-page/grocery-page18.jpg",1),(
+    -> "gi019","Grocery Item",200.00,"A delightfully crunchy rolled wafer biscuit with creamy vanilla filling. Images for illustration purposes only. Product received may vary",5,"images/grocery-page/grocery-page19.jpg",1),(
+    -> "gi020","Grocery Item",200.00,"A delightfully crunchy rolled wafer biscuit with creamy vanilla filling. Images for illustration purposes only. Product received may vary",5,"images/grocery-page/grocery-page20.jpg",1);
+Query OK, 10 rows affected (0.005 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+MariaDB [green_mart]> create table vegitables_details(
+    -> vegitable_id varcha;r (255),
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 2
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'r (255),' at line 1
+MariaDB [green_mart]> create table vegetables_details(
+    -> vegetable_id varchar (255),
+    -> vegetable_name varchar(255),
+    -> vegetable_prices int,
+    -> vegetable_des varchar(255),
+    -> vegetable_qty int,
+    -> vegetable_image_path varchart(255),
+    -> vegetable_category int
+    -> );
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(255),
+vegetable_category int
+)' at line 7
+MariaDB [green_mart]> create table vegetables_details(
+    -> vegetable_id varchar(255),
+    -> vegetable_name varchar(255),
+    -> vegetable_prices int,
+    -> vegetable_des varchar(255),
+    -> vegetable_qty int,
+    -> vegetable_image_path varchart(255),
+    -> vegetable_category int
+    -> );
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(255),
+vegetable_category int
+)' at line 7
+MariaDB [green_mart]> create table vegetables_details(
+    -> vegetable_id varchar(255),
+    -> vegetable_name varchar(255),
+    -> vegetable_prices int,
+    -> vegetable_des varchar(255),
+    -> vegetable_qty int,
+    -> vegetable_image_path varchar(255),
+    -> vegetable_category int
+    -> );
+Query OK, 0 rows affected (0.009 sec)
+
+MariaDB [green_mart]> insert into vegetables_details(
+    -> vegetable_id, vegetable_name,vegetable_prices,vegetable_des,vegetable_qty,vegetable_image_path,vegetable_category)values(
+    -> "vi001","Vegetables",200.00," Soybeans are a very rich source of plant-based protein and fat",5,"images/vegetables-and-fruits-page/v1.jpg",1),(
+    -> "vi002","Vegetables",200.00," Soybeans are a very rich source of plant-based protein and fat",5,"images/vegetables-and-fruits-page/v2.jpg",1),(
+    -> "vi003","Vegetables",200.00," Soybeans are a very rich source of plant-based protein and fat",5,"images/vegetables-and-fruits-page/v3.jpg",1),(
+    -> "vi004","Vegetables",200.00," Soybeans are a very rich source of plant-based protein and fat",5,"images/vegetables-and-fruits-page/v4.jpg",1),(
+    -> "vi003","Vegetables",200.00," Soybeans are a very rich source of plant-based protein and fat",5,"images/vegetables-and-fruits-page/v3.jpg",1);
+Query OK, 5 rows affected (0.005 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+MariaDB [green_mart]>
+
+Setting environment for using XAMPP for Windows.
+user@DESKTOP-HENQJ59 c:\xampp
+# mysql -h localhost -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 8
+Server version: 10.4.32-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> use green_mart;
+Database changed
+MariaDB [green_mart]> show tables;
++-----------------------------+
+| Tables_in_green_mart        |
++-----------------------------+
+| grocery_details             |
+| house_holders_items_details |
+| user_info                   |
++-----------------------------+
+3 rows in set (0.001 sec)
+
+MariaDB [green_mart]> select * from user_info;
+Empty set (0.053 sec)
+
+MariaDB [green_mart]> select * from grocery_details;
++------------+-----------------------------------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+----------------------------------------+------------------+
+| grocery_id | grocery_name                      | prices | item_des                                                                                                                                                                                                                                                        | qty  | image_path                             | grocery_cetegory |
++------------+-----------------------------------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+----------------------------------------+------------------+
+| gi001      | Rice                              |    200 | A milled medium-long grained rice. Nadu rice is pre-boiled.                                                                                                                                                                                                     |    5 | images/grocery-page/grocery-page1.jpg  |                1 |
+| gi002      | Mentos                            |    200 | Mentos Chewy Mints are offered in several refreshing flavour varieties. Mentos Mint provides the benefit of a mint with an enjoyable chew! Images for illustration purposes only. Product received may vary.                                                    |    5 | images/grocery-page/grocery-page3.jpg  |                1 |
+| gi003      | Chocolate                         |    200 | Ssorted Handcrafted chcolates packed in a box. Images for illustration purposes only. Product received may vary.                                                                                                                                                |    5 | images/grocery-page/grocery-page2.jpg  |                1 |
+| gi004      | Renuka coconut milk powder        |    200 | Has a wide range of applications and is great for soups, sauces, curries, seafood and vegetable dishes as well as cakes, biscuits, desserts and beverages. Images for illustration purposes only. Product received may vary.                                    |    5 | images/grocery-page/grocery-page4.jpg  |                1 |
+| gi005      | Soya beans                        |    200 | Soybeans are a very rich source of plant-based protein and fat. Images for illustration purposes only. Product received may vary.                                                                                                                               |    5 | images/grocery-page/grocery-page7.jpg  |                1 |
+| gi006      | Samaposha                         |    200 | Soybeans are a very rich source of plant-based protein and fat. Images for illustration purposes only. Product received may vary.                                                                                                                               |    5 | images/grocery-page/grocery-page12.jpg |                1 |
+| gi007      | Maliban smart cream crackers 125g |    200 | This assortment of fun-filled and exciting range of snacks including Chick Bits, Cheese Bits and Kritz comes in a range of varied flavours to entice the taste buds and be the life of any occasion. Also available in different sizes and come in ready-to-eat |    5 | images/grocery-page/grocery-page10.jpg |                1 |
+| gi008      | Munchee wafer stick vanilla       |    200 | A delightfully crunchy rolled wafer biscuit with creamy vanilla filling. Images for illustration purposes only. Product received may vary.                                                                                                                      |    5 | images/grocery-page/grocery-page9.jpg  |                1 |
+| gi009      | Oateo instant oats pouch 200g     |    200 | A delightfully crunchy rolled wafer biscuit with creamy vanilla filling. Images for illustration purposes only. Product received may vary.                                                                                                                      |    5 | images/grocery-page/grocery-page15.jpg |                1 |
+| gi010      | Dry Fish                          |    200 | A delightfully crunchy rolled wafer biscuit with creamy vanilla filling. Images for illustration purposes only. Product received may vary.                                                                                                                      |    5 | images/grocery-page/grocery-page16.jpg |                1 |
++------------+-----------------------------------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+----------------------------------------+------------------+
+10 rows in set (0.005 sec)
+
+MariaDB [green_mart]> select grocery_id, grocery_name, prices, image_path from grocery_details where grocery_cetegory = 1;
++------------+-----------------------------------+--------+----------------------------------------+
+| grocery_id | grocery_name                      | prices | image_path                             |
++------------+-----------------------------------+--------+----------------------------------------+
+| gi001      | Rice                              |    200 | images/grocery-page/grocery-page1.jpg  |
+| gi002      | Mentos                            |    200 | images/grocery-page/grocery-page3.jpg  |
+| gi003      | Chocolate                         |    200 | images/grocery-page/grocery-page2.jpg  |
+| gi004      | Renuka coconut milk powder        |    200 | images/grocery-page/grocery-page4.jpg  |
+| gi005      | Soya beans                        |    200 | images/grocery-page/grocery-page7.jpg  |
+| gi006      | Samaposha                         |    200 | images/grocery-page/grocery-page12.jpg |
+| gi007      | Maliban smart cream crackers 125g |    200 | images/grocery-page/grocery-page10.jpg |
+| gi008      | Munchee wafer stick vanilla       |    200 | images/grocery-page/grocery-page9.jpg  |
+| gi009      | Oateo instant oats pouch 200g     |    200 | images/grocery-page/grocery-page15.jpg |
+| gi010      | Dry Fish                          |    200 | images/grocery-page/grocery-page16.jpg |
++------------+-----------------------------------+--------+----------------------------------------+
+10 rows in set (0.001 sec)
+
+MariaDB [green_mart]> select grocery_id, grocery_name, prices,item_des, image_path from grocery_details where clothes_id= 'gi001';
+ERROR 1054 (42S22): Unknown column 'clothes_id' in 'where clause'
+MariaDB [green_mart]> select grocery_id, grocery_name, prices,item_des, image_path from grocery_details where grocery_id = 'gi001';
++------------+--------------+--------+-------------------------------------------------------------+---------------------------------------+
+| grocery_id | grocery_name | prices | item_des                                                    | image_path                            |
++------------+--------------+--------+-------------------------------------------------------------+---------------------------------------+
+| gi001      | Rice         |    200 | A milled medium-long grained rice. Nadu rice is pre-boiled. | images/grocery-page/grocery-page1.jpg |
++------------+--------------+--------+-------------------------------------------------------------+---------------------------------------+
+1 row in set (0.000 sec)
+
+MariaDB [green_mart]> insert into grocery_details(
+    -> grocery_id,grocery_name,prices,item_des,qty,image_path,grocery_cetegory)values(
+    -> "gi011","Grocery Item",200.00,"A delightfully crunchy rolled wafer biscuit with creamy vanilla filling. Images for illustration purposes only. Product received may vary",5,"images/grocery-page/grocery-page5.jpg",1),(
+    -> "gi012","Grocery Item",200.00,"A delightfully crunchy rolled wafer biscuit with creamy vanilla filling. Images for illustration purposes only. Product received may vary",5,"images/grocery-page/grocery-page6.jpg",1),(
+    -> "gi013","Grocery Item",200.00,"A delightfully crunchy rolled wafer biscuit with creamy vanilla filling. Images for illustration purposes only. Product received may vary",5,"images/grocery-page/grocery-page8.jpg",1),(
+    -> "gi014","Grocery Item",200.00,"A delightfully crunchy rolled wafer biscuit with creamy vanilla filling. Images for illustration purposes only. Product received may vary",5,"images/grocery-page/grocery-page11.jpg",1),(
+    -> "gi015","Grocery Item",200.00,"A delightfully crunchy rolled wafer biscuit with creamy vanilla filling. Images for illustration purposes only. Product received may vary",5,"images/grocery-page/grocery-page13.jpg",1),(
+    -> "gi016","Grocery Item",200.00,"A delightfully crunchy rolled wafer biscuit with creamy vanilla filling. Images for illustration purposes only. Product received may vary",5,"images/grocery-page/grocery-page14.jpg",1),(
+    -> "gi017","Grocery Item",200.00,"A delightfully crunchy rolled wafer biscuit with creamy vanilla filling. Images for illustration purposes only. Product received may vary",5,"images/grocery-page/grocery-page17.jpg",1),(
+    -> "gi018","Grocery Item",200.00,"A delightfully crunchy rolled wafer biscuit with creamy vanilla filling. Images for illustration purposes only. Product received may vary",5,"images/grocery-page/grocery-page18.jpg",1),(
+    -> "gi019","Grocery Item",200.00,"A delightfully crunchy rolled wafer biscuit with creamy vanilla filling. Images for illustration purposes only. Product received may vary",5,"images/grocery-page/grocery-page19.jpg",1),(
+    -> "gi020","Grocery Item",200.00,"A delightfully crunchy rolled wafer biscuit with creamy vanilla filling. Images for illustration purposes only. Product received may vary",5,"images/grocery-page/grocery-page20.jpg",1);
+Query OK, 10 rows affected (0.005 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+MariaDB [green_mart]> create table vegitables_details(
+    -> vegitable_id varcha;r (255),
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 2
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'r (255),' at line 1
+MariaDB [green_mart]> create table vegetables_details(
+    -> vegetable_id varchar (255),
+    -> vegetable_name varchar(255),
+    -> vegetable_prices int,
+    -> vegetable_des varchar(255),
+    -> vegetable_qty int,
+    -> vegetable_image_path varchart(255),
+    -> vegetable_category int
+    -> );
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(255),
+vegetable_category int
+)' at line 7
+MariaDB [green_mart]> create table vegetables_details(
+    -> vegetable_id varchar(255),
+    -> vegetable_name varchar(255),
+    -> vegetable_prices int,
+    -> vegetable_des varchar(255),
+    -> vegetable_qty int,
+    -> vegetable_image_path varchart(255),
+    -> vegetable_category int
+    -> );
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(255),
+vegetable_category int
+)' at line 7
+MariaDB [green_mart]> create table vegetables_details(
+    -> vegetable_id varchar(255),
+    -> vegetable_name varchar(255),
+    -> vegetable_prices int,
+    -> vegetable_des varchar(255),
+    -> vegetable_qty int,
+    -> vegetable_image_path varchar(255),
+    -> vegetable_category int
+    -> );
+Query OK, 0 rows affected (0.009 sec)
+
+MariaDB [green_mart]> insert into vegetables_details(
+    -> vegetable_id, vegetable_name,vegetable_prices,vegetable_des,vegetable_qty,vegetable_image_path,vegetable_category)values(
+    -> "vi001","Vegetables",200.00," Soybeans are a very rich source of plant-based protein and fat",5,"images/vegetables-and-fruits-page/v1.jpg",1),(
+    -> "vi002","Vegetables",200.00," Soybeans are a very rich source of plant-based protein and fat",5,"images/vegetables-and-fruits-page/v2.jpg",1),(
+    -> "vi003","Vegetables",200.00," Soybeans are a very rich source of plant-based protein and fat",5,"images/vegetables-and-fruits-page/v3.jpg",1),(
+    -> "vi004","Vegetables",200.00," Soybeans are a very rich source of plant-based protein and fat",5,"images/vegetables-and-fruits-page/v4.jpg",1),(
+    -> "vi003","Vegetables",200.00," Soybeans are a very rich source of plant-based protein and fat",5,"images/vegetables-and-fruits-page/v3.jpg",1);
+Query OK, 5 rows affected (0.005 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+MariaDB [green_mart]> DELETE FROM vegetables_details WHERE vegetable_id ='vi003';
+Query OK, 2 rows affected (0.042 sec)
+
+MariaDB [green_mart]> insert into vegetables_details(
+    -> vegetable_id, vegetable_name,vegetable_prices,vegetable_des,vegetable_qty,vegetable_image_path,vegetable_category)values(
+    -> "vi003","Vegetables",200.00," Soybeans are a very rich source of plant-based protein and fat",5,"images/vegetables-and-fruits-page/v3.jpg",1),(
+    -> "vi005","Vegetables",200.00," Soybeans are a very rich source of plant-based protein and fat",5,"images/vegetables-and-fruits-page/v5.jpg",1),(
+    -> "vi006","Vegetables",200.00," Soybeans are a very rich source of plant-based protein and fat",5,"images/vegetables-and-fruits-page/v6.jpg",1),(
+    -> "vi007","Vegetables",200.00," Soybeans are a very rich source of plant-based protein and fat",5,"images/vegetables-and-fruits-page/v7.jpg",1),(
+    -> "vi008","Vegetables",200.00," Soybeans are a very rich source of plant-based protein and fat",5,"images/vegetables-and-fruits-page/v8.jpg",1),(
+    -> "vi009","Vegetables",200.00," Soybeans are a very rich source of plant-based protein and fat",5,"images/vegetables-and-fruits-page/v9.jpg",1),(
+    -> "vi010","Vegetables",200.00," Soybeans are a very rich source of plant-based protein and fat",5,"images/vegetables-and-fruits-page/v10.jpg",1),(
+    -> "vi011","Vegetables",200.00," Soybeans are a very rich source of plant-based protein and fat",5,"images/vegetables-and-fruits-page/v11.jpg",1),(
+    -> "vi012","Vegetables",200.00," Soybeans are a very rich source of plant-based protein and fat",5,"images/vegetables-and-fruits-page/v12.jpg",1),(
+    -> "vi013","Vegetables",200.00," Soybeans are a very rich source of plant-based protein and fat",5,"images/vegetables-and-fruits-page/v13.jpg",1),(
+    -> "vi014","Vegetables",200.00," Soybeans are a very rich source of plant-based protein and fat",5,"images/vegetables-and-fruits-page/v14.jpg",1),(
+    -> "vi015","Vegetables",200.00," Soybeans are a very rich source of plant-based protein and fat",5,"images/vegetables-and-fruits-page/v15.jpg",1),(
+    -> "vi016","Vegetables",200.00," Soybeans are a very rich source of plant-based protein and fat",5,"images/vegetables-and-fruits-page/v16.jpg",1),(
+    -> "vi017","Vegetables",200.00," Soybeans are a very rich source of plant-based protein and fat",5,"images/vegetables-and-fruits-page/v17.jpg",1),(
+    -> "vi018","Vegetables",200.00," Soybeans are a very rich source of plant-based protein and fat",5,"images/vegetables-and-fruits-page/v18.jpg",1),(
+    -> "vi019","Vegetables",200.00," Soybeans are a very rich source of plant-based protein and fat",5,"images/vegetables-and-fruits-page/v19.jpg",1),(
+    -> "vi020","Vegetables",200.00," Soybeans are a very rich source of plant-based protein and fat",5,"images/vegetables-and-fruits-page/v20.jpg",1);
+Query OK, 17 rows affected (0.006 sec)
+Records: 17  Duplicates: 0  Warnings: 0
+
+MariaDB [green_mart]> insert into vegetables_details(
+    -> vegetable_id, vegetable_name,vegetable_prices,vegetable_des,vegetable_qty,vegetable_image_path,vegetable_category)values(
+    -> "fi001","Vegetables",200.00," Soybeans are a very rich source of plant-based protein and fat",5,"images/vegetables-and-fruits-page/f1.jpg",1),(
+    -> "fi;001","Fruits",200.00," Soybeans are a very rich source of plant-based protein and fat",5,"images/vegetables-and-fruits-page/f2.jpg",1),(
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 4
+MariaDB [green_mart]> insert into vegetables_details(
+    -> vegetable_id, vegetable_name,vegetable_prices,vegetable_des,vegetable_qty,vegetable_image_path,vegetable_category)values(
+    -> "fi001","Fruits",200.00," Soybeans are a very rich source of plant-based protein and fat",5,"images/vegetables-and-fruits-page/f1.jpg",1),(
+    -> "fi002","Fruits",200.00," Soybeans are a very rich source of plant-based protein and fat",5,"images/vegetables-and-fruits-page/f2.jpg",1),(
+    -> "fi003","Fruits",200.00," Soybeans are a very rich source of plant-based protein and fat",5,"images/vegetables-and-fruits-page/f3.jpg",1),(
+    -> "fi004","Fruits",200.00," Soybeans are a very rich source of plant-based protein and fat",5,"images/vegetables-and-fruits-page/f4.jpg",1),(
+    -> "fi005","Fruits",200.00," Soybeans are a very rich source of plant-based protein and fat",5,"images/vegetables-and-fruits-page/f5.jpg",1),(
+    -> "fi006","Fruits",200.00," Soybeans are a very rich source of plant-based protein and fat",5,"images/vegetables-and-fruits-page/f6.jpg",1),(
+    -> "fi007","Fruits",200.00," Soybeans are a very rich source of plant-based protein and fat",5,"images/vegetables-and-fruits-page/f7.jpg",1),(
+    -> "fi008","Fruits",200.00," Soybeans are a very rich source of plant-based protein and fat",5,"images/vegetables-and-fruits-page/f8.jpg",1),(
+    -> "fi009","Fruits",200.00," Soybeans are a very rich source of plant-based protein and fat",5,"images/vegetables-and-fruits-page/f9.jpg",1),(
+    -> "fi010","Fruits",200.00," Soybeans are a very rich source of plant-based protein and fat",5,"images/vegetables-and-fruits-page/f10.jpg",1);
+Query OK, 10 rows affected (0.004 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+MariaDB [green_mart]>
