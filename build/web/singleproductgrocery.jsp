@@ -96,7 +96,7 @@
                     //out.println("<button id='normal' onclick='addToCart(" + itemName + ","+ itemPrice + ")'>Add To Cart</button> <br><br>");
                     //String buttonScript = "addToCart('" + itemName + "','" + itemPrice + "')";
                     //out.println("<button id='normal' onclick='" + buttonScript + "'>Add To Cart</button>");
-                    out.println("<button id='normal' onclick=\"" + "addToCart('" + itemName + "','" + itemPrice + "','" + imagePath + "')" + "\">Add To Cart</button>");
+                    out.println("<button id='normal' onclick=\"" + "addToCart('" + itemName + "','" + itemPrice + "','" + imagePath + "','"+itemId+"')" + "\">Add To Cart</button>");
 
                     out.println("</div>");
                     out.println("</section>");
@@ -142,7 +142,7 @@
         </footer> 
 
         <script>
-            function addToCart(itemName, itemPrice, imagePath) {
+            function addToCart(itemName, itemPrice, imagePath,itemId) {
 
                 var value = document.getElementById("num").value;
                 console.log(value);
@@ -154,6 +154,7 @@
                     name: itemName,
                     prices: itemPrice,
                     image: imagePath,
+                    id:itemId,
                     qty: value
                 };
                 itemsArray.push(newItem);

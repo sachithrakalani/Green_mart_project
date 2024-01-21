@@ -97,11 +97,15 @@
                             <br>
                             <div id="total"></div><br><br><br><br>
                             <div id="sub-total"></div><br><br><br><br>
-                            <!--<form action="order" method="post">-->
-                            <!--<button type="submit" id="normal" onclick ="submitData()">CHECK OUT</button>-->
-                            <button onclick="submitData()">Submit Data</button>
+                            <form action="order" method="post">
+                            <input type = "hidden" name="text" id="text">
+                            <input type = "hidden" name = "email" id="email">
+                            <button type="submit" id="normal" onclick="save()">CHECK OUT</button>
+                            
+                            <!--<utton onclick="submitData()">Submit Data</button>-->
+                            
 
-                            <!--</form>-->
+                            </form>
                         </div>
                     </div>
                 </center>
@@ -146,8 +150,13 @@
 
         <script>
             function getItem() {
+                
                 var existingItems = localStorage.getItem('items');
                 var itemsArray = JSON.parse(existingItems);
+                var email = localStorage.getItem('Email');
+                //console.log(email);
+                document.getElementById("email").value = JSON.stringify(email);
+            
 
                 var cartItemsDiv = document.getElementById('cart-items');
                 clearElement(cartItemsDiv);
@@ -161,6 +170,9 @@
                 }
                 calTotal(itemsArray);
                 
+            }
+            function save(){
+                alert('Your Order Successfully');
             }
 
             function createItemDiv(item) {
@@ -229,7 +241,9 @@
                 }
                 document.getElementById("total").innerHTML = " Total =  LKR  " + total + ".00";
                 document.getElementById("sub-total").innerHTML = " Sub  Total =  LKR  " + total + ".00";
-            }
+                document.getElementById("text").value = JSON.stringify(itemsArray);
+                
+                }
 
             function submitData() {
                 // Sample data, replace with your actual data gathering logic

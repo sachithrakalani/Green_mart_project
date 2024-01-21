@@ -76,10 +76,10 @@
                     <div class="wrapper">
                         <h1>Sign In</h1>
                         <form action="signIn" method="POST">
-                            <input type="email" placeholder="Email" name="Email">
-                            <input type="password" placeholder="Password" name="Password">
+                            <input type="email" placeholder="Email" name="Email" id="email">
+                            <input type="password" placeholder="Password" name="Password" >
 
-                            <button type="submit">Sign In</button>
+                            <button type="submit" onclick  ="saveEmail()">Sign In</button>
                             <div class="member">
                                 Not a member?<a href="signUp.jsp">Register Now</a>
                             </div>
@@ -121,5 +121,15 @@
                 <p>E Commerces App - 2023</p>
             </div>
         </footer>
+        
+        <script>
+            function saveEmail(){
+                var email = document.getElementById("email").value;
+                //var uemail = email.value;
+                console.log(email);
+                
+                localStorage.setItem('Email', email);
+            }
+        </script>
     </body>
 </html>
