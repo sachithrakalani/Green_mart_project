@@ -25,46 +25,10 @@
                     <ul>
                         <li ><a href="index.jsp">Home</a></li>
                         <li ><a  href="grocery.jsp">Grocery</a></li>
-                        
-<!--                            <div class="sub-menu-1">
-                                <ul>
-                                    <li class="hover-me"><a href="womenclothes1.jsp">Women</a><i class="fa fa-angle-right"></i>
-                                        <div class="sub-menu-2">
-                                            <ul>
-                                                <li><a href="womenclothesfrock.jsp">Frocks</a></li>
-                                                <li><a href="womenclothestshirt.jsp">T-shirts</a></li>
-                                                <li><a href="womenclothesblouse.jsp">Blouse</a></li>
-                                                <li><a href="womenclothessaree.jsp">Saree</a></li>
-                                                <li><a href="womenclothesdenims.jsp">Denims</a></li>
-                                            </ul>  
-                                            
-                                        </div>
-                                    </li>
-                                    <li class="hover-me"><a href="#">Men</a><i class="fa fa-angle-right"></i>
-                                        <div class="sub-menu-2">
-                                            <ul>
-                                                <li><a href="mentshirt.jsp">T-shirts</a></li>
-                                                <li><a href="mendenims.jsp">Denims</a></li>
-                                             </ul>  
-                                        </div>
-                                    </li>
-                                    <li class="hover-me"><a href="kidsclothes.jsp">Kids</a>
-                                </ul>
-                            </div>-->
-                        </li>
                         <li><a class="active" href="vegetables.jsp">Vegetables/Fruits</a>
-<!--                            <div class="sub-menu-1">
-                                <ul>
-                                    <li class="hover-me"><a href="womenshoes.jsp">Women</a>
-                                    </li>
-                                    <li class="hover-me"><a href="#">Men</a>
-                                    </li>
-                                </ul>
-                            <div>-->
-                        <!--</li>-->
-                        
                         <li><a href="meat.jsp">Meat</a></li>
                         <li><a href="householders.jsp" >Householder Items</a></li>
+                        <li><a href="contactus.jsp">Contact Us</a>
                         <li><a href="cart.jsp"><i class="fa-solid fa-cart-shopping"></i></i></a></li>
                         <li><a href="signUp.jsp"><i class="fa fa-user-circle" aria-hidden="true"></i></a></li>
                     </ul>

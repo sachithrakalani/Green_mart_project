@@ -27,7 +27,8 @@
                         <li ><a href="index.jsp">Grocery</a></li>
                         <li><a href="vegetables.jsp">Vegetables/Fruits</a>
                         <li><a href="meat.jsp">Meat</a></li>
-                        <li><a href="householders.jsp" class="active">Householder Items</a></li>
+                        <li><a href="householders.jsp" class="active">Householder Items</a>
+                        </li><li><a href="contactus.jsp">Contact Us</a>
                         <li><a href="cart.jsp"><i class="fa-solid fa-cart-shopping"></i></i></a></li>
                         <li><a href="signUp.jsp"><i class="fa fa-user-circle" aria-hidden="true"></i></a></li>
                     </ul>
