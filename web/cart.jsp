@@ -133,8 +133,9 @@
             }
             function save(){
                 alert('Your Order Successfully');
+                localStorage.removeItem('items');
             }
-
+            
             function createItemDiv(item) {
 
                 var itemDetailsDiv = document.createElement('div');

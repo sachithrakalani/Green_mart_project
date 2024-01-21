@@ -11,6 +11,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.sql.*;
+import java.util.Properties;
+import javax.mail.Authenticator;
+import javax.mail.Message;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 
 /**
  *
@@ -90,6 +98,31 @@ public class signUp extends HttpServlet {
             pst.setString(4, email);
             pst.setString(5, password);
             pst.executeUpdate();
+            try {
+                String from = "kalanisathyangi@gmail.com";
+                String pass = "wnbl pvkj gkfk roan";
+                Properties properties = new Properties();
+                properties.put("mail.smtp.auth", "true");
+                properties.put("mail.smtp.starttls.enable", "true");
+                properties.put("mail.smtp.host", "smtp.gmail.com");
+                properties.put("mail.smtp.port", "587");
+                Session session = Session.getInstance(properties, new Authenticator() {
+                    protected PasswordAuthentication getPassAuthentication() {
+                        return new PasswordAuthentication(from, pass);
+                    }
+                });
+                Transport transport = session.getTransport("smtp");
+                transport.connect("smtp.gmail.com", 587, from, pass);
+                MimeMessage message = new MimeMessage(session);
+                message.setFrom(new InternetAddress(from));
+                message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(email));
+                message.setSubject("Registerded Successfully!");
+                message.setText("Welcome our Green mart");
+                transport.sendMessage(message, message.getAllRecipients());
+                transport.close();
+            } catch (Exception e) {
+                out.print(e);
+            }
             response.sendRedirect("grocery.jsp");
         }
         catch(Exception e){

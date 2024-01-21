@@ -100,28 +100,20 @@ public class order extends HttpServlet {
             pst.executeUpdate();
             try {
                 String from = "kalanisathyangi@gmail.com";
-                
                 String password = "wnbl pvkj gkfk roan";
-
-                
                 Properties properties = new Properties();
                 properties.put("mail.smtp.auth", "true");
                 properties.put("mail.smtp.starttls.enable", "true");
                 properties.put("mail.smtp.host", "smtp.gmail.com");
                 properties.put("mail.smtp.port", "587");
-
                 Session session = Session.getInstance(properties, new Authenticator() {
                     protected PasswordAuthentication getPasswordAuthentication() {
                         return new PasswordAuthentication(from, password);
                     }
                 });
-
                 Transport transport = session.getTransport("smtp");
-
                 transport.connect("smtp.gmail.com", 587, from, password);
-
                 MimeMessage message = new MimeMessage(session);
-
                 message.setFrom(new InternetAddress(from));
                 message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(mail));
                 message.setSubject("Hello, Order added successfully!");
@@ -133,12 +125,10 @@ public class order extends HttpServlet {
                 out.print(e);
             }
             response.sendRedirect("index.jsp");
-
         } catch (Exception e) {
 
         }
     }
-
     //processRequest(request, response);
 }
 
@@ -148,9 +138,9 @@ public class order extends HttpServlet {
  * @return a String containing servlet description
  */
 @Override
-public String getServletInfo() {
-        return "Short description";
-    }// </editor-fold>
+//public String getServletInfo() {
+//        return "Short description";
+//    }// </editor-fold>
 
     
 

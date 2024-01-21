@@ -85,7 +85,7 @@
                                 <input type="checkbox" id="checkbox" style="padding-left:10px;">I agree to these I agree to these  
                                 <lable for="checkbox">I agree to these <a href="#"> I agree to these </a></lable>
                             </div>-->
-                            <button type="submit">Sign Up</button>
+                            <button type="submit" onclick="save()">Sign Up</button>
                             <div class="member">
                                 Already member?<a href="signIn.jsp">Login Here</a>
                             </div>
@@ -127,5 +127,11 @@
                 <p>E Commerces App - 2023</p>
             </div>
         </footer>
+        
+        <script>
+            function save(){
+                alert('Registered Successfully');
+            }
+        </script>
     </body>
 </html>
