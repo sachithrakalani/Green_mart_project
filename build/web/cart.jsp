@@ -22,48 +22,12 @@
                     <ul>
                         <li ><a href="index.jsp">Home</a></li>
                         <li ><a href="grocery.jsp">Grocery</a></li>
-                        
-<!--                            <div class="sub-menu-1">
-                                <ul>
-                                    <li class="hover-me"><a href="womenclothes1.jsp">Women</a><i class="fa fa-angle-right"></i>
-                                        <div class="sub-menu-2">
-                                            <ul>
-                                                <li><a href="womenclothesfrock.jsp">Frocks</a></li>
-                                                <li><a href="womenclothestshirt.jsp">T-shirts</a></li>
-                                                <li><a href="womenclothesblouse.jsp">Blouse</a></li>
-                                                <li><a href="womenclothessaree.jsp">Saree</a></li>
-                                                <li><a href="womenclothesdenims.jsp">Denims</a></li>
-                                            </ul>  
-                                            
-                                        </div>
-                                    </li>
-                                    <li class="hover-me"><a href="#">Men</a><i class="fa fa-angle-right"></i>
-                                        <div class="sub-menu-2">
-                                            <ul>
-                                                <li><a href="mentshirt.jsp">T-shirts</a></li>
-                                                <li><a href="mendenims.jsp">Denims</a></li>
-                                             </ul>  
-                                        </div>
-                                    </li>
-                                    <li class="hover-me"><a href="kidsclothes.jsp">Kids</a>
-                                </ul>
-                            </div>-->
-                        </li>
                         <li><a href="vegetables.jsp">Vegetables/Fruits</a>
-<!--                            <div class="sub-menu-1">
-                                <ul>
-                                    <li class="hover-me"><a href="womenshoes.jsp">Women</a>
-                                    </li>
-                                    <li class="hover-me"><a href="#">Men</a>
-                                    </li>
-                                </ul>
-                            <div>-->
-                        <!--</li>-->
-                        
                         <li><a href="meat.jsp">Meat</a></li>
                         <li><a href="householders.jsp" >Householder items</a></li>
                         <li><a class="active" href="cart.jsp"><i class="fa-solid fa-cart-shopping"></i></i></a></li>
-                        <li><a href="signUp.jsp"><i class="fa fa-user-circle" aria-hidden="true"></i></a></li>                    </ul>
+                        <li><a href="signUp.jsp"><i class="fa fa-user-circle" aria-hidden="true"></i></a></li>                    
+                    </ul>
                 </div>
                 
             </div>
@@ -78,7 +42,7 @@
                             <!--<div class="item-details">-->
                                     <!--<div class="img"></div>-->
                                     <!--<div class="item-data">-->
-<!--                                    <i class="fa fa-user-circle" aria-hidden="true">-->
+                                    <!--<i class="fa fa-user-circle" aria-hidden="true">-->
                                         <!--<h4></h4>-->
                                     <!--</div>-->
                             <!--</div>-->
@@ -101,10 +65,6 @@
                             <input type = "hidden" name="text" id="text">
                             <input type = "hidden" name = "email" id="email">
                             <button type="submit" id="normal" onclick="save()">CHECK OUT</button>
-                            
-                            <!--<utton onclick="submitData()">Submit Data</button>-->
-                            
-
                             </form>
                         </div>
                     </div>
@@ -244,33 +204,6 @@
                 document.getElementById("text").value = JSON.stringify(itemsArray);
                 
                 }
-
-            function submitData() {
-                // Sample data, replace with your actual data gathering logic
-                var dataToSubmit = {
-                    key1: "value1",
-                    key2: "value2",
-                    key3: "value3"
-                };
-
-                // Make an AJAX request to the server to store the data
-                var xhr = new XMLHttpRequest();
-                xhr.open('POST', 'order', true);
-                xhr.setRequestHeader('Content-Type', 'application/json');
-                xhr.onreadystatechange = function () {
-                    console.log(xhr);
-                    if (xhr.readyState === 4) {
-                        if (xhr.status === 200) {
-                            // Handle success
-                            alert('Data stored successfully!');
-                        } else {
-                            // Handle error
-                            alert('Error storing data!');
-                        }
-                    }
-                };
-                xhr.send(JSON.stringify(dataToSubmit));
-            }
 
         </script>
         

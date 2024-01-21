@@ -9,14 +9,19 @@ import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse; 
+import javax.servlet.http.HttpServletResponse;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
+import com.sun.mail.smtp.SMTPTransport;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import javax.mail.*;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+import java.util.Properties;
 
 /**
  *
@@ -42,7 +47,7 @@ public class order extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet order</title>");            
+            out.println("<title>Servlet order</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet order at " + request.getContextPath() + "</h1>");
@@ -79,39 +84,71 @@ public class order extends HttpServlet {
             throws ServletException, IOException {
         PrintWriter out = response.getWriter();
         String items = request.getParameter("text");
-        String email = request.getParameter("email");
-        
+        String mail = request.getParameter("email");
+
         //out.print(items);
         //out.print(email);
         JsonArray jsonArray = new JsonParser().parse(items).getAsJsonArray();
-        
+
         //out.print(jsonArray.get(0));
-        
-        try{
+        try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/green_mart", "root", "");
-            PreparedStatement pst=con.prepareStatement("Insert into orders(email,items)values(?,?)");
-            pst.setString(1, email);
+            PreparedStatement pst = con.prepareStatement("Insert into orders(email,items)values(?,?)");
+            pst.setString(1, mail);
             pst.setString(2, items);
             pst.executeUpdate();
-            out.print("Thank you");
-            
+            try {
+                String from = "kalanisathyangi@gmail.com";
+                
+                String password = "wnbl pvkj gkfk roan";
+
+                
+                Properties properties = new Properties();
+                properties.put("mail.smtp.auth", "true");
+                properties.put("mail.smtp.starttls.enable", "true");
+                properties.put("mail.smtp.host", "smtp.gmail.com");
+                properties.put("mail.smtp.port", "587");
+
+                Session session = Session.getInstance(properties, new Authenticator() {
+                    protected PasswordAuthentication getPasswordAuthentication() {
+                        return new PasswordAuthentication(from, password);
+                    }
+                });
+
+                Transport transport = session.getTransport("smtp");
+
+                transport.connect("smtp.gmail.com", 587, from, password);
+
+                MimeMessage message = new MimeMessage(session);
+
+                message.setFrom(new InternetAddress(from));
+                message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(mail));
+                message.setSubject("Hello, Order added successfully!");
+                message.setText("Order added successfully!");
+                message.setText(items);
+                transport.sendMessage(message, message.getAllRecipients());
+                transport.close();
+            } catch (Exception e) {
+                out.print(e);
+            }
+            response.sendRedirect("index.jsp");
+
+        } catch (Exception e) {
+
         }
-        catch(Exception e){
-            out.print(e);
-        }
-    }
-        
-        //processRequest(request, response);
     }
 
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
-    @Override
-    public String getServletInfo() {
+    //processRequest(request, response);
+}
+
+/**
+ * Returns a short description of the servlet.
+ *
+ * @return a String containing servlet description
+ */
+@Override
+public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
 
