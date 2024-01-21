@@ -182,7 +182,7 @@
 
                 itemDetailsDiv.appendChild(imageDiv);
                 itemDetailsDiv.appendChild(itemDataDiv);
-                itemDetailsDiv.appendChild(buttonDiv);
+                //itemDetailsDiv.appendChild(buttonDiv);
                 //console.log(itemDetailsDiv);
                 return itemDetailsDiv;
             }

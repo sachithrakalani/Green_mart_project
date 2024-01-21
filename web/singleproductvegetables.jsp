@@ -126,6 +126,7 @@
                 localStorage.setItem('items', updatedItems);
 
                 console.log(updatedItems);
+                alert('Item added to cart'!);
             }
         </script>
     </body>
